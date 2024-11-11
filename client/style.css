@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: sans-serif;
+    height: 100dvh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.8fr 4fr;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6580B8;
+    --secondary-color: #E7EBEF;
+    --green: #37BF70;
+}
+
+.contact-nav {
+    color: white;
+    padding: .6rem 1.3rem;
+    background: var(--primary-color);
+}
+
+.nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    gap: 1.5rem;
+}
+
+.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bottom .join {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0.3rem .5rem;
+}
+
+.nav-bottom .join-btn {
+    padding: .3rem 1rem;
+    background: var(--green);
+    border: none;
+    color: white;
+}
+
+.contact-container .contact-left {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-left h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-left h5 {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.name-msg>* {
+    margin: 0;
+}
+
+.name-msg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-right {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    transition: all .1s;
+}
+.contact:hover {
+    background: #8888884d;
+}
+
+.contact-container .contact-left img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.contacts {
+    height: 100dvh;
+    transition: all .3s ease;
+    transform: translateX(0);
+}
+
+.contact-container {
+    height: 82dvh;
+    overflow-y: scroll;
+}
+
+.chats header {
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    background: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.chats {
+    background: var(--secondary-color);
+}
+
+.chats .chat-container {
+    display: grid;
+    grid-template-rows: 4fr .4fr;
+    height: 90dvh;
+}
+
+.chats .chat-body {
+    padding-inline: 2.3rem;
+    position: relative;
+    padding-block: 1rem;
+    overflow: auto;
+}
+.chat-body.nothing {
+    height: 85dvh;
+    font-size: 3rem;
+    display: grid;
+    place-content: center;
+}
+.input-container.nothing {
+    display: none;
+}
+
+.chats .input-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+}
+
+.chat-container .input-container input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.chat-container .input-container .send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--green);
+    color: white;
+    display: grid;
+    place-content: center;
+}
+
+.message {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    font-weight: 500;
+    flex-direction: column;
+    padding: .5rem .8rem;
+    font-size: .9rem;
+    gap: 1px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+    width: fit-content;
+    min-width: 100px;
+}
+
+.message .messageText {
+    font-size: .9rem;
+}
+
+.message .messageName {
+    font-size: .7rem;
+}
+
+.message .messageTime {
+    font-size: .6rem;
+    text-align: right;
+}
+
+.sender {
+    background: var(--primary-color);
+    justify-self: end;
+    color: white;
+}
+
+.sender span:first-child {
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+.reciever {
+    background: white;
+    color: #222;
+}
+
+.reciever span:first-child {
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+.join-msg {
+    margin-block: 1rem;
+    color: #888;
+    font-size: .8rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.create-room {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.create-room .nameInput {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0.3rem .5rem;
+}
+
+.create-room .create-btn {
+    padding: .3rem 1rem;
+    background: orange;
+    border: none;
+    color: white;
+}
+.activeContact {
+    background: #88888814;
+}
+.joined {
+    font-size: .8rem;
+    color: #888;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 4fr;
+    }
+    .contacts {
+        position: absolute;
+        z-index: 1000;
+    }
+    .active {
+        transform: translateX(-100vh);
+    }
+    .contact-container {
+        z-index: 1000;
+        background: white;
+    }
+}

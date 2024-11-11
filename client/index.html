@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="contacts">
+        <header>
+            <nav class="contact-nav">
+                <div class="nav-top">
+                    <i class="fa-solid fa-bars toggle"></i>
+                    <h2 class="userName">...</h2>
+                </div>
+                <div class="nav-bottom">
+                    <input placeholder="Join room..." class="join" type="text">
+                    <button class="join-btn">Join</button>
+                </div>
+                <div class="create-room">
+                    <input placeholder="Enter your name" class="nameInput" type="text">
+                    <button class="create-btn">Create</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="contact-container">
+            <!-- <div class="contact">
+                <div class="contact-left">
+                    <img src="./imgs/pfp.jpeg" alt="">
+                    <div class="name-msg">
+                        <h3>Vegeta</h3>
+                        <h5>What did you learned?</h5>
+                    </div>
+                </div>
+                <div class="contact-right"><span>10:00PM</span></div>
+            </div>
+            
+            <div class="contact">
+                <div class="contact-left">
+                    <img src="./imgs/pfp.jpeg" alt="">
+                    <div class="name-msg">
+                        <h3>Vegeta</h3>
+                        <h5>What did you learned?</h5>
+                    </div>
+                </div>
+                <div class="contact-right"><span>10:00PM</span></div>
+            </div> -->
+        </div>
+    </section>
+    <section class="chats">
+        <header>
+            <div>
+                <i class="fa-solid fa-bars toggle2"></i>
+            </div>
+            <nav class="roomName">
+                Global Room
+            <nav/>
+        </header>
+        <div class="chat-container">
+            <div class="chat-body nothing">
+                Create Room
+                <!-- <div class="join-msg">
+                    someone has join 
+                </div>
+                <div class="message sender">
+                    <span>Zeeshan</span>
+                    <span>Message</span>
+                    <span>time</span>
+                </div>
+                <div class="message reciever">
+                    <span>Vegeta</span>
+                    <span>Message</span>
+                </div> -->
+            </div>
+            
+            <div class="input-container nothing">
+                <input class="messageInput" tabindex="1" type="text" placeholder="Type a message">
+                <button class="send-btn" tabindex="2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
